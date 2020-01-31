@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	cout << "This is a test.";
+	cout << "This is working.";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
