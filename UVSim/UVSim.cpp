@@ -3,11 +3,26 @@
 
 #include "pch.h"
 #include <iostream>
+#include "Debugging.h"
 using namespace std;
 
 int main()
 {
+	int RegisterA;
 	cout << "This is a test.";
+	// we need the date to be stored in a data structure TBD
+	Debugging bug;
+	bool top = bug.sBreak("1010");
+	bug.memDump();
+	bug.sContinue(1070);
+
+	// UI
+
+	//Arithmatic
+
+	//
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
