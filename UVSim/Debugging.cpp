@@ -1,25 +1,31 @@
+#include "pch.h"
 #include "Debugging.h"
 
 void Debugging::memDump()
 {
-	for (int i = 0; i < 10; i++)
+	std::cout << "\n";
+	std::cout << "MEMORY: ";
+	std::cout << "\n";
+	for (int i = -1; i < 10; i++)
 	{
-		if (i == 0) {
-			std::cout << "/t";
+		std::cout << "\n";
+		if (i < 0) {
+			std::cout << "\t";
 		}
 		else {
-			std::cout << "0" << i << "/t";
+			std::cout << i << "0" << "\t";
 		}
-		for (int j = 0; j < 10; j++)
+		for (int j = -1; j < 9; j++)
 		{
-			if (j == 0) {
-				std::cout << "0" << i << "/t";
+			if (i == -1) {
+				std::cout << "0" << j + 1 << "\t";
 			}
-			else {
-				std::cout << "str /t";
+			else{
+				std::cout << "00000 \t";
 			}
 		}
 	}
+	std::cout << "\n";
 }
 
 bool Debugging::sBreak(std::string userInput)
@@ -36,5 +42,5 @@ bool Debugging::sBreak(std::string userInput)
 void Debugging::sContinue(int address)
 {
 	int pointer = address;
-	std::cout << "pointer is " << pointer;
+	std::cout << "pointer is at address" << pointer;
 }
